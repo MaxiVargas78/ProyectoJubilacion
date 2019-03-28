@@ -5,7 +5,7 @@ raiz=Tk()
 raiz.title("PREVISION JUBILACION")
 raiz.resizable(1,1)
 #raiz.iconbitmap("afp.icon")
-raiz.geometry("900x720")
+#raiz.geometry("900x720")
 raiz.config(bg="red")
 
 sexom=BooleanVar()
@@ -27,7 +27,7 @@ def datos():
 	aa=int(cuadroahorro.get())
 	##################################### FONDO A ##################################
 	if a2 is True:
-		
+
 		edad=int(cuadroedad.get())
 		sex=sexom.get()
 		sex1=sexof.get()
@@ -49,10 +49,12 @@ def datos():
 				z=z+z*random.uniform(0.004,0.0043)
 				z=z+t
 			z=int(z)+aa
+
 			result.config(text=nombre+" Su ahorro total sera de  $"+str(int(z))+ "pesos"+ "." +" Su pension mensual sera de  $" +str(int((z/30)/12))+" pesos.")
+
 			##################FONDO B #############################################################33
 	if b2 is True:
-		
+
 		edad=int(cuadroedad.get())
 		sex=sexom.get()
 		sex1=sexof.get()
@@ -62,7 +64,7 @@ def datos():
 			t=(Sueldo/100)*por
 			for i in range(0,(65-edad)*12):
 				z=z+x
-				z=z+z*random.uniform(0.004,0.0043)
+				z=z+z*random.uniform(0.0035,0.0038)
 				z=z+t
 			z=int(z)+aa
 			result.config(text=nombre+" Su ahorro total sera de  $"+str(int(z))+ " pesos"+ "." +" Su pension mensual sera de  $" +str(int((z/20)/12))+" pesos.")
@@ -71,13 +73,13 @@ def datos():
 			t=(Sueldo/100)*por
 			for i in range(0,(60-edad)*12):
 				z=z+x
-				z=z+z*random.uniform(0.004,0.0043)
+				z=z+z*random.uniform(0.0035,0.0038)
 				z=z+t
 			z=int(z)+aa
 			result.config(text=nombre+" Su ahorro total sera de  $"+str(int(z))+ " pesos"+ "." +" Su pension mensual sera de  $" +str(int((z/30)/12))+" pesos.")
 			######################################### FONDO C ##############################################
 	if c2 is True:
-		
+
 		edad=int(cuadroedad.get())
 		sex=sexom.get()
 		sex1=sexof.get()
@@ -87,7 +89,7 @@ def datos():
 			t=(Sueldo/100)*por
 			for i in range(0,(65-edad)*12):
 				z=z+x
-				z=z+z*random.uniform(0.004,0.0043)
+				z=z+z*random.uniform(0.003,0.0033)
 				z=z+t
 			z=int(z)+aa
 			result.config(text=nombre+" Su ahorro total sera de  $"+str(int(z))+ " pesos"+ "." +" Su pension mensual sera de  $" +str(int((z/20)/12))+" pesos.")
@@ -96,13 +98,15 @@ def datos():
 			t=(Sueldo/100)*por
 			for i in range(0,(60-edad)*12):
 				z=z+x
-				z=z+z*random.uniform(0.004,0.0043)
+				z=z+z*random.uniform(0.003,0.0033)
+				z=z+t
+
 				z=z+t
 			z=int(z)+aa
 			result.config(text=nombre+" Su ahorro total sera de  $"+str(int(z))+ " pesos"+ "." +" Su pension mensual sera de  $" +str(int((z/30)/12))+" pesos.")
 				############################################## FONDO D#######################################
 	if d2 is True:
-		
+
 		edad=int(cuadroedad.get())
 		sex=sexom.get()
 		sex1=sexof.get()
@@ -112,7 +116,7 @@ def datos():
 			t=(Sueldo/100)*por
 			for i in range(0,(65-edad)*12):
 				z=z+x
-				z=z+z*random.uniform(0.004,0.0043)
+				z=z+z*random.uniform(0.0025,0.0029)
 				z=z+t
 			z=int(z)+aa
 			result.config(text=nombre+" Su ahorro total sera de  $"+str(int(z))+ " pesos"+ "." +" Su pension mensual sera de  $" +str(int((z/20)/12))+" pesos.")
@@ -121,13 +125,13 @@ def datos():
 			t=(Sueldo/100)*por
 			for i in range(0,(60-edad)*12):
 				z=z+x
-				z=z+z*random.uniform(0.004,0.0043)
+				z=z+z*random.uniform(0.0025,0.0029)
 				z=z+t
 			z=int(z)+aa
 			result.config(text=nombre+" Su ahorro total sera de  $"+str(int(z))+ " pesos"+ "." +" Su pension mensual sera de  $" +str(int((z/30)/12))+" pesos.")
 			#################################### FONDO E ###########################################
 	if e2 is True:
-		
+
 		edad=int(cuadroedad.get())
 		sex=sexom.get()
 		sex1=sexof.get()
@@ -137,19 +141,19 @@ def datos():
 			t=(Sueldo/100)*por
 			for i in range(0,(65-edad)*12):
 				z=z+x
-				z=z+z*random.uniform(0.004,0.0043)
+				z=z+z*random.uniform(0.0020,0.0024)
 				z=z+t
 			z=int(z)+aa
-			result.config(text=nombre+" Su ahorro total sera de  $"+str(int(z))+ " pesos"+ "." +" Su pension mensual sera de  $" +str(int((z/20)/12))+" pesos.")
+			result.config(text=nombre+", su ahorro total sera de:  $ "+str(int(z))+ " pesos"+ "." +" Su pension mensual sera de  $" +str(int((z/20)/12))+" pesos.")
 		if sex1 is True:
 			x=Sueldo*0.1
 			t=(Sueldo/100)*por
 			for i in range(0,(60-edad)*12):
 				z=z+x
-				z=z+z*random.uniform(0.004,0.0043)
+				z=z+z*random.uniform(0.0020,0.0024)
 				z=z+t
 			z=int(z)+aa
-			result.config(text=nombre+" Su ahorro total sera de  $"+str(int(z))+ " pesos"+ "." +" Su pension mensual sera de  $" +str(int((z/30)/12))+" pesos.")
+			result.config(text=nombre+", su ahorro total sera de:  $ "+str(int(z))+ " pesos"+ "." +" Su pension mensual sera de  $" +str(int((z/30)/12))+" pesos.")
 raiz.config(bg="white")
 miframe=Frame(raiz, width=500, height=400)
 miframe.pack()
@@ -242,6 +246,27 @@ txtcotvol.grid(row=7,column=0,sticky="w")
 txtfondo=Label(miframe, text="Seleccione su fondo:",bg="#2da2ab", padx=10,pady=10)
 txtfondo.grid(row=9,column=0,sticky="w")
 
+txtranking=Label(miframe, text="Ranking Actualizado Mejores AFP:",bg="#2da2ab",fg="white", padx=10,pady=10)
+txtranking.grid(row=10,column=0,sticky="w")
+
+txtranking1=Label(miframe, text="I.-Modelo",bg="#2da2ab",fg="white" ,padx=10,pady=10)
+txtranking1.grid(row=11,column=0,sticky="w")
+
+txtranking2=Label(miframe, text="II.-PlanVital",bg="#2da2ab",fg="white", padx=10,pady=10)
+txtranking2.grid(row=12,column=0,sticky="w")
+
+txtranking3=Label(miframe, text="III.-Habitat",bg="#2da2ab",fg="white", padx=10,pady=10)
+txtranking3.grid(row=13,column=0,sticky="w")
+
+txtranking4=Label(miframe, text="IV.-Capital",bg="#2da2ab",fg="white", padx=10,pady=10)
+txtranking4.grid(row=14,column=0,sticky="w")
+
+txtranking5=Label(miframe, text="V.-Cuprum",bg="#2da2ab",fg="white", padx=10,pady=10)
+txtranking5.grid(row=15,column=0,sticky="w")
+
+txtranking6=Label(miframe, text="VI.-ProVida",bg="#2da2ab",fg="white", padx=10,pady=10)
+txtranking6.grid(row=16,column=0,sticky="w")
+
 
 
 
@@ -249,9 +274,9 @@ txtfondo.grid(row=9,column=0,sticky="w")
 
 
 calculo=Button(miframe, text="Calcular", padx=20, pady=10,command=datos)
-calculo.grid(row=12, columnspan=2)
-result=Label(miframe,bg="#2da2ab", padx=10,pady=10)
-result.grid(row=13,columnspan=2)
-#txtfondo=Label(miframe, text="hola").place(x=50, y=80)
+calculo.grid(row=12, columnspan=5)
+result=Label(miframe,bg="#2da2ab",font=("Comic Sans MS", 15),fg="white", padx=10,pady=10)
+result.grid(row=16,columnspan=2)
+
 
 raiz.mainloop()
